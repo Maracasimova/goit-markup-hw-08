@@ -1,0 +1,40 @@
+.clients {
+  @include padding-h(94px, 94px);
+}
+
+.clients__list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+}
+
+.clients__item {
+  display: flex;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--links-color);
+  border-radius: 4px;
+  fill: var(--links-color);
+  background-color: var(--white-color);
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  &:focus {
+    fill: var(--accent-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

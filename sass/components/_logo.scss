@@ -1,0 +1,21 @@
+.logo {
+  text-decoration: none;
+}
+
+.logo-blue,
+.logo-black,
+.logo-white {
+  color: var(--accent-color);
+  line-height: 1.19;
+  text-decoration: none;
+
+  @include fonts((Raleway, sans-serif), null, 26px, null);
+}
+
+.logo-black {
+  color: var(--black-color);
+}
+
+.logo-white {
+  color: var(--white-color);
+}

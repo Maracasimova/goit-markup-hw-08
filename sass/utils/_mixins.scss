@@ -1,0 +1,16 @@
+@mixin fonts($ff, $fw, $fs, $ls) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    letter-spacing: $ls;
+}
+
+@mixin padding-h($pt, $pb) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin padding-w($pr, $pl) {
+    padding-right: $pr;
+    padding-left: $pl;
+}

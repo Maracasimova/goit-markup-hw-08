@@ -1,0 +1,37 @@
+.features {
+  @include padding-h(94px, null);
+}
+
+.features__list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+}
+
+.features__item {
+  width: 270px;
+}
+
+.features__icon-container {
+  display: flex;
+  background-color: var(--background-color-our-team);
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.features__text {
+  color: var(--title-text-color);
+  line-height: 1.71;
+
+  @include fonts(null, 400, 14px, null);
+}

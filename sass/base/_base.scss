@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+
+  @include fonts(Roboto, 700, null, 0.03em);
+}

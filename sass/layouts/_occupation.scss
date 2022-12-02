@@ -1,0 +1,37 @@
+.occupation {
+  @include padding-h(94px, 94px);
+}
+
+.occupation__list {
+  @extend %list;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 30px;
+}
+
+.occupation__item {
+  position: relative;
+}
+
+.occupation__overlay {
+  position: absolute;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.occupation__text {
+  display: flex;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include fonts(Roboto, 700, 14px, null);
+}
