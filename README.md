@@ -1,2 +1,1 @@
-# github-goit-1
-BEM Methodology, SASS Preprocessors
+Responsive layout and graphics
