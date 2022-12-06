@@ -1,4 +1,5 @@
 .section-title {
+  @extend %section-title-mobile;
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -8,7 +9,11 @@
   color: var(--primary-text-color);
 
   line-height: calc(42 / 36);
-   text-align: center;
+  text-align: center;
 
   @include fonts(null, 700, 36px, null);
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(null, 700, 36px, null);
+  }
 }
