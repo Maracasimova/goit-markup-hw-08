@@ -37,12 +37,12 @@
   transform: translateX(0);
 }
 
-.menu-toggle {
+.selector {
   display: flex;
   justify-content: end;
 }
 
-.menu-toggle__close-button {
+.selector__close-button {
   position: absolute;
   min-height: 40px;
   min-width: 40px;
@@ -55,34 +55,31 @@
   right: 25px;
   top: 21px;
 
-  &:focus .menu-toggle__icon {
+  &:focus .selector__icon {
     fill: var(--accent-color);
   }
 }
 
-.menu-toggle__icon {
+.selector__icon {
   width: 19px;
   height: 19px;
 }
 
-.mobile-menu-nav__list {
+.mobile-menu-pages__list {
   @extend %list;
 }
 
-.mobile-menu-nav__item {
+.mobile-menu-pages__item {
   margin-bottom: 32px;
 }
 
-.mobile-menu-nav__item:last-child {
+.mobile-menu-pages__item:last-child {
   margin-bottom: 0;
 }
 
-.mobile-menu-nav__link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
+.mobile-menu-pages__link {
+  @include fonts(null, 500, 40px, 0.02em);
   line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition-property: color;
   transition-duration: 250ms;
@@ -97,39 +94,28 @@
   margin-top: auto;
 }
 
-.mobile-menu-auth__list {
+.mobile-menu-links__list {
   @extend %list;
 }
 
-.mobile-menu-auth__tel-item {
+.mobile-menu-links__item-tel {
   margin-bottom: 32px;
 }
 
-.mobile-menu-auth__mail-item {
+.mobile-menu-links__item-mail {
   margin-bottom: 64px;
   width: 100%;
 }
 
-.mobile-menu-auth__tel-link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  font-size: 34px;
+.mobile-menu-links__link-tel {
+  @include fonts(null, 500, 34px, 0.02em);
   line-height: calc(40 / 34);
   color: var(--accent-color);
 }
 
-.mobile-menu-auth__mail-link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
+.mobile-menu-links__link-mail {
+  @include fonts(null, 500, 24px, 0.02em);
   color: var(--title-text-color);
-  font-size: 24px;
   line-height: calc(28 / 24);
   transition-property: color;
   transition-duration: 250ms;
@@ -161,17 +147,12 @@
 }
 
 .mobile-menu-socials__link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  font-size: 18px;
+  @include fonts(null, 500, 18px, 0.02em);
   line-height: calc(22 / 18);
   color: var(--accent-color);
 }
-.mobile-menu-socials__splitter {
+
+.mobile-menu-socials__separator {
   width: 1px;
   height: 22px;
   background-color: rgba(33, 33, 33, 0.2);
