@@ -1,7 +1,5 @@
 .contacts-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2px;
+  margin-top: 12px;
 }
 
 .contacts-form__name {
@@ -112,12 +110,17 @@
 }
 
 .contacts-form__accept-text {
-  line-height: calc(24 / 14);
+  line-height: calc(14 / 12);
   color: var(--title-text-color);
   margin-left: 7px;
   user-select: none;
 
-  @include fonts(null, 400, 14px, 0.03em);
+  @include fonts(null, 400, 12px, 0.03em);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+}
 }
 
 .contacts-form__link {
@@ -126,7 +129,12 @@
   color: var(--accent-color);
   margin-left: 7px;
 
-  @include fonts(null, 400, 14px, 0.03em);
+  @include fonts(null, 400, 12px, 0.03em);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+}
 }
 
 .contacts-form__data:focus + .contacts-form__icon {

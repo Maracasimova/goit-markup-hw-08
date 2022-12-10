@@ -254,10 +254,14 @@ a {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:hover, .button:focus {
   color: var(--white-color);
   background-color: var(--background-button-color-sec);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .cards {
@@ -1251,7 +1255,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 50;
   -webkit-transition: opacity, visibility;
   transition: opacity, visibility;
   -webkit-transition-duration: 250ms;
@@ -1274,8 +1278,9 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  width: 100%;
+  height: 609px;
   background-color: var(--white-color);
   top: 50%;
   left: 50%;
@@ -1288,6 +1293,13 @@ a {
   padding-bottom: 40px;
   padding-right: 40px;
   padding-left: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+    height: 581px;
+  }
 }
 
 .modal__button {
@@ -1340,19 +1352,27 @@ a {
 .modal__form {
   position: absolute;
   display: block;
-  width: 448px;
+  max-width: 370px;
+  width: 100%;
+  padding: 0 5px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__form {
+    max-width: 448px;
+  }
 }
 
 .modal__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: 1.15;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.5;
   font-size: 20px;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .modal__text {
+    line-height: 1.15;
+  }
 }
 
 .navigation {
@@ -1571,14 +1591,7 @@ a {
 }
 
 .contacts-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 2px;
+  margin-top: 12px;
 }
 
 .contacts-form__name {
@@ -1737,7 +1750,7 @@ a {
 }
 
 .contacts-form__accept-text {
-  line-height: 1.7142857143;
+  line-height: 1.1666666667;
   color: var(--title-text-color);
   margin-left: 7px;
   -webkit-user-select: none;
@@ -1745,8 +1758,14 @@ a {
       -ms-user-select: none;
           user-select: none;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-form__accept-text {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .contacts-form__link {
@@ -1756,8 +1775,14 @@ a {
   color: var(--accent-color);
   margin-left: 7px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-form__link {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .contacts-form__data:focus + .contacts-form__icon {
