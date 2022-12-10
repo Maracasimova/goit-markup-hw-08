@@ -12,16 +12,15 @@
 
 .address__item {
   margin-bottom: 9px;
-}
-
-.address__item:last-child {
+  &:last-child {
   margin-bottom: 0;
+}
 }
 
 .address__link {
   color: var(--white-color);
   text-decoration: none;
-  line-height: 1.7;
+  line-height: calc(16 / 14);
   font-style: normal;
 
   @include fonts(null, 400, 14px, 0.03em);

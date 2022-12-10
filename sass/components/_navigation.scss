@@ -1,7 +1,11 @@
-
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .navigation__item--current::after {
@@ -17,19 +21,25 @@
 }
 
 .navigation__item {
-  position: relative;
+  @media screen and (min-width: 768px) {
+   justify-content: center;
+   
+  }
+  @media screen and (min-width: 1200px) {
+   margin-bottom: 0;
+  }
 }
 
 .navigation__link {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  &.navigation__link--current {
+.navigation__link.navigation__link--current {
     position: relative;
     color: var(--accent-color);
   }
-}
 
 .navigation__links a {
   display: flex;
@@ -37,11 +47,11 @@
 
   color: var(--title-text-color);
 
-  line-height: 1.14;
+  line-height: calc(14 / 12);
   text-decoration: none;
 
-  @include fonts(inherit, 500, 14px, 0.02em);
-  @include padding-h(32px, 32px);
+  @include fonts(inherit, 500, 12px, 0.02em);
+  
 
   &:hover,
   &:focus {
@@ -51,12 +61,20 @@
 
 .navigation__pages {
   @extend %list;
-  display: flex;
-  margin-left: 94px;
+  display: none;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 94px;
+  }
 }
 
-.navigation__pages .navigation__item:not(last-child) {
-  margin-right: 50px;
+
+.navigation__pages .navigation__item + .navigation__item {
+  margin-left: 50px;
 }
 
 .navigation__pages a {
@@ -82,13 +100,20 @@
 
 .navigation__links {
   @extend %list;
-  display: flex;
-  margin-left: auto;
-  margin-right: 0;
-}
+  display: none;
 
-.navigation__links .navigation__item:not(last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 
 .navigation__icon {
