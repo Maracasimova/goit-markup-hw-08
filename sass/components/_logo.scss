@@ -1,5 +1,4 @@
 .logo {
-  text-decoration: none;
 
   @media screen and (min-width: 480px), (max-width: 480px) {
     margin-top: 16px;
@@ -13,7 +12,6 @@
 .logo-white {
   color: var(--accent-color);
   line-height: calc(33 / 24);
-  text-decoration: none;
 
   @include fonts((Raleway, sans-serif), null, 26px, null);
 

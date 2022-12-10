@@ -165,7 +165,7 @@ summary {
   --gap: 30px;
 }
 
-.social-links, .navigation__links, .navigation__pages, .address__list, .team__list, .portfolio__list, .occupation__list, .features__list, .clients__list, .cards {
+.social-links, .navigation__links, .navigation__pages, .address__list, .mobile-menu-socials__list, .mobile-menu-auth__list, .mobile-menu-nav__list, .team__list, .portfolio__list, .occupation__list, .features__list, .clients__list, .cards {
   list-style: none;
 }
 
@@ -225,6 +225,11 @@ ol {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 .button {
@@ -335,10 +340,6 @@ ol {
       -ms-flex-align: center;
           align-items: center;
   margin: 63px 24px;
-}
-
-.cards__effects {
-  text-decoration: none;
 }
 
 .cards__description {
@@ -962,6 +963,211 @@ ol {
   font-size: 16px;
 }
 
+.mobile-menu__open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__open {
+    display: none;
+  }
+}
+
+.mobile-menu__icon {
+  fill: rgb(33, 33, 33);
+}
+
+.menu-container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: var(--background-color);
+  z-index: 999;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.menu-toggle__close-button {
+  position: absolute;
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  right: 25px;
+  top: 21px;
+}
+.menu-toggle__close-button:focus .menu-toggle__icon {
+  fill: var(--accent-color);
+}
+
+.menu-toggle__icon {
+  width: 19px;
+  height: 19px;
+}
+
+.mobile-menu-nav__item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-nav__item:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-menu-nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-nav__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu-bottom {
+  margin-top: auto;
+}
+
+.mobile-menu-auth__tel-item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-auth__mail-item {
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.mobile-menu-auth__tel-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  font-size: 34px;
+  line-height: 1.1764705882;
+  color: var(--accent-color);
+}
+
+.mobile-menu-auth__mail-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  font-size: 24px;
+  line-height: 1.1666666667;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+.mobile-menu-auth__mail-link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu-socials {
+  width: 100%;
+  padding: 5px;
+}
+
+.mobile-menu-socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mobile-menu-socials__item {
+  margin-right: 9px;
+}
+
+.mobile-menu-socials__item:last-child {
+  margin-right: 0;
+}
+
+.mobile-menu-socials__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  font-size: 18px;
+  line-height: 1.2222222222;
+  color: var(--accent-color);
+}
+
+.mobile-menu-socials__splitter {
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-right: 9px;
+}
+
 .address {
   margin-top: 20px;
 }
@@ -982,7 +1188,6 @@ ol {
 
 .address__link {
   color: var(--white-color);
-  text-decoration: none;
   line-height: 1.1428571429;
   font-style: normal;
   font-weight: 400;
@@ -1019,9 +1224,6 @@ ol {
   }
 }
 
-.logo {
-  text-decoration: none;
-}
 @media screen and (min-width: 480px), (max-width: 480px) {
   .logo {
     margin-top: 16px;
@@ -1035,7 +1237,6 @@ ol {
 .logo-white {
   color: var(--accent-color);
   line-height: 1.375;
-  text-decoration: none;
   font-family: Raleway, sans-serif;
   font-size: 26px;
 }
@@ -1235,7 +1436,6 @@ ol {
           align-items: center;
   color: var(--title-text-color);
   line-height: 1.1666666667;
-  text-decoration: none;
   font-family: inherit;
   font-weight: 500;
   font-size: 12px;
@@ -1268,8 +1468,7 @@ ol {
 .navigation__pages a {
   display: block;
   color: var(--primary-text-color);
-  line-height: 1.14;
-  text-decoration: none;
+  line-height: 1.1428571429;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;

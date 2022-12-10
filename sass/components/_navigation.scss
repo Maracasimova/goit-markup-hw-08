@@ -48,7 +48,6 @@
   color: var(--title-text-color);
 
   line-height: calc(14 / 12);
-  text-decoration: none;
 
   @include fonts(inherit, 500, 12px, 0.02em);
   
@@ -82,8 +81,7 @@
 
   color: var(--primary-text-color);
 
-  line-height: 1.14;
-  text-decoration: none;
+  line-height: calc(16/ 14);
 
   @include fonts(inherit, 500, 14px, 0.02em);
   @include padding-h(32px, 32px);
