@@ -1395,7 +1395,6 @@ a {
 }
 
 .navigation__item--current::after {
-  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
