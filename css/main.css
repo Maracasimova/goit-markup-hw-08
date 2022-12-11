@@ -580,6 +580,9 @@ a {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -647,6 +650,12 @@ a {
     margin-top: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
+}
+
 .footer__subscription {
   margin-top: 60px;
   -webkit-box-align: center;
@@ -655,7 +664,8 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .footer__subscription {
-    margin-left: 92px;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
