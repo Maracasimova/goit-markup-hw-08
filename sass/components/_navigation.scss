@@ -8,6 +8,18 @@
   }
 }
 
+.navigation__item {
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+   justify-content: center;
+   
+  }
+  @media screen and (min-width: 1200px) {
+   margin-bottom: 0;
+  }
+}
+
 .navigation__item--current::after {
   content: '';
   position: absolute;
@@ -18,16 +30,6 @@
   height: 4px;
   background: var(--accent-color);
   border-radius: 60px;
-}
-
-.navigation__item {
-  @media screen and (min-width: 768px) {
-   justify-content: center;
-   
-  }
-  @media screen and (min-width: 1200px) {
-   margin-bottom: 0;
-  }
 }
 
 .navigation__link {

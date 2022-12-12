@@ -2,8 +2,12 @@
   @extend %list;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   gap: 10px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+}
 }
 
 .social-links__item {

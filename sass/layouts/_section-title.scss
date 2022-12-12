@@ -4,16 +4,17 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: var(--primary-text-color);
 
   line-height: calc(42 / 36);
   text-align: center;
 
-  @include fonts(null, 700, 36px, null);
+  @include fonts(null, null, 28px, null);
 
   @media screen and (min-width: 1200px) {
     @include fonts(null, 700, 36px, null);
+    margin-bottom: 50px;
   }
 }
